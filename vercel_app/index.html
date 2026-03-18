@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Productivity Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Personal Productivity Dashboard</h1>
+            <p>Track your daily goals and achievements</p>
+        </header>
+
+        <main>
+            <section class="stats">
+                <div class="stat-card">
+                    <h3>Tasks Completed</h3>
+                    <div class="stat-number" id="tasks">0</div>
+                    <div class="stat-change positive">Great progress!</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Study Hours</h3>
+                    <div class="stat-number" id="hours">0</div>
+                    <div class="stat-change positive">Keep learning!</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Goals Achieved</h3>
+                    <div class="stat-number" id="goals">0</div>
+                    <div class="stat-change positive">On fire!</div>
+                </div>
+            </section>
+
+            <section class="controls">
+                <button onclick="completeTask()">Complete Task</button>
+                <button onclick="addStudyHour()">Add Study Hour</button>
+                <button onclick="achieveGoal()">Achieve Goal</button>
+                <button onclick="resetStats()">Reset Stats</button>
+            </section>
+
+            <section class="activity">
+                <h2>Recent Achievements</h2>
+                <div id="activity-log">
+                    <div class="activity-item">Welcome to your productivity dashboard!</div>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2>Add New Achievement</h2>
+                <form id="itemForm">
+                    <input type="text" id="itemName" placeholder="Achievement name" required>
+                    <input type="number" id="itemValue" placeholder="Points" required>
+                    <select id="itemCategory">
+                        <option value="task">Task</option>
+                        <option value="study">Study Hours</option>
+                        <option value="goal">Goals</option>
+                    </select>
+                    <button type="submit">Add Achievement</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
